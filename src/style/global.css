@@ -136,6 +136,12 @@ body{
 /* end mail */
 
 /* large device */
+@media only screen and (max-width: 1200px) {
+    #action-container.hide {
+        width: 7%;
+    }
+}
+
 @media only screen and (max-width: 1024px) {
     #action-container.hide {
         width: 6%;

@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import {FiStar} from 'react-icons/fi'
 import { Link } from 'react-router-dom';
 
-const Message = ({id,data,status}) => {
+const Message = ({id,data,status,isSent}) => {
 
   const mid = `i${id}`;
   const handleStar = (e) => {
@@ -46,7 +46,7 @@ const Message = ({id,data,status}) => {
             <span className=' font-bold'>{data.from}</span>
           </div>
           <div className='whitespace-pre overflow-hidden ml-12 mr-2 md:mx-4 w-[90%] font-bold' id='mes'>
-          <Link to={`detail/${id}`} state={{id:id}}>
+          <Link to={`detail/${id}`} state={{id:id,isSent}}>
             {data.message}
           </Link>
           </div>
@@ -61,7 +61,7 @@ const Message = ({id,data,status}) => {
         <span>{data.from}</span>
       </div>
       <div className='whitespace-nowrap overflow-hidden ml-12 mr-2 md:mx-4 w-[90%]' id='mes'>
-      <Link to={`detail/${id}`} state={{id:id}}>
+      <Link to={`detail/${id}`} state={{id:id,isSent}}>
           {data.message}
       </Link>
       </div>

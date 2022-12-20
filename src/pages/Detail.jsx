@@ -1,23 +1,37 @@
 import { useLocation } from "react-router-dom";
 import data from "../data";
+import sentData from "../sentData";
 import {MdArrowBackIos} from 'react-icons/md'
 import { Link } from "react-router-dom";
 
 const Detail = () => {
   const location = useLocation();
   const {id} = location.state
-  const detail = data.filter(i => i.id == id) 
-  data.forEach( i => {
-    if(i.id == id){
-        i.isRead = true
-    }
-  })
+  const {isSent} = location.state
+  let detail = []
+  if(isSent == "yes"){
+    detail = sentData.filter(i => i.id == id) 
+    sentData.forEach( i => {
+      if(i.id == id){
+          i.isRead = true
+      }
+    })
+  }
+  else{
+    detail = data.filter(i => i.id == id) 
+    data.forEach( i => {
+      if(i.id == id){
+          i.isRead = true
+      }
+    })
+  }
+  
 
   const back = () => {
     window.history.back();
   }
   return (
-    <div className="border-2 border-slate-200 w-full rounded-md ml-[13%]">
+    <div className="border-2 border-slate-200 w-full rounded-md ml-[13%] md:ml-[6%]">
         <div className="py-1">
             <button className="flex items-center px-4 text-lg" onClick={back}>
                 <MdArrowBackIos></MdArrowBackIos>Back
