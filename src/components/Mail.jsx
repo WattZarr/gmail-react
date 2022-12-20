@@ -182,13 +182,13 @@ const Mail = () => {
 
 
   return (
-    <div className="h-screen overflow-scroll mt-4 ml-4 relative z-0 pb-32" id="mail">
+    <div className="h-screen overflow-scroll mt-4 md:ml-28 relative z-0 pb-32" id="mail">
         <div className="flex items-center text-sm md:text-xl mb-8">
             <input type="checkbox" className="mr-8" title="select" id="allcheck" name="allcheck"/>
             <VscRefresh className="mx-8" title="refresh" onClick={()=>window.location.reload()}></VscRefresh>
             <HiOutlineDotsVertical className="mx-8 focus:bg-slate-500" title="more" onClick={handleModal}></HiOutlineDotsVertical>
         </div>
-        <div className="hidden py-4 px-16 border-2 rounded w-fit shadow-2xl bg-white absolute z-50 top-4 left-44" id='modal'>
+        <div className="hidden py-4 px-16 border-2 rounded w-fit shadow-2xl bg-white absolute z-50  top-4 left:5 md:left-44" id='modal'>
             <p className="cursor-pointer" onClick={allRead}>Mark as all read</p>
             <hr />
             <p className="mt-4 text-slate-500" id="false-text">Select messages to see  <br /> more options</p>

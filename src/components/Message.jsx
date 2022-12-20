@@ -45,7 +45,7 @@ const Message = ({id,data,status}) => {
             <div><FiStar className='mr-2' id={mid} onClick={handleStar}></FiStar></div>
             <span className=' font-bold'>{data.from}</span>
           </div>
-          <div className='whitespace-pre overflow-hidden ml-12 mr-2 md:mx-4 w-[90%] font-bold'>
+          <div className='whitespace-pre overflow-hidden ml-12 mr-2 md:mx-4 w-[90%] font-bold' id='mes'>
           <Link to={`detail/${id}`} state={{id:id}}>
             {data.message}
           </Link>
@@ -60,7 +60,7 @@ const Message = ({id,data,status}) => {
         <div><FiStar className='mr-2' id={mid} onClick={handleStar}></FiStar></div>
         <span>{data.from}</span>
       </div>
-      <div className='whitespace-nowrap overflow-hidden ml-12 mr-2 md:mx-4 w-[90%]'>
+      <div className='whitespace-nowrap overflow-hidden ml-12 mr-2 md:mx-4 w-[90%]' id='mes'>
       <Link to={`detail/${id}`} state={{id:id}}>
           {data.message}
       </Link>

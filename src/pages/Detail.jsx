@@ -17,7 +17,7 @@ const Detail = () => {
     window.history.back();
   }
   return (
-    <div className="border-2 border-slate-200 w-full rounded-md">
+    <div className="border-2 border-slate-200 w-full rounded-md ml-[13%]">
         <div className="py-1">
             <button className="flex items-center px-4 text-lg" onClick={back}>
                 <MdArrowBackIos></MdArrowBackIos>Back

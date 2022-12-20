@@ -9,7 +9,7 @@ const Important = () => {
   })
 
   return (
-   <div className="h-screen overflow-scroll mt-4 ml-4 relative z-0 pb-32 w-[80%]">
+   <div className="h-screen overflow-scroll mt-4 relative z-0 pb-32 w-[80%] ml-[13%] md:ml-[9%] lg:ml-[6%]">
     <p className="font-bold text-xl mb-4">Important Mail</p>
     {important?.map(i => (
       <Message key={i.id} id={i.id} data={i}></Message>

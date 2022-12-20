@@ -15,6 +15,9 @@ body{
 /* side bar */
 
 #action-container{
+    position: absolute;
+    z-index: 10000;
+    background-color: white;
     width:15%;
     transition: all 0.5s ease;
 }
@@ -178,6 +181,9 @@ body{
         padding-right: 65%;
     }
 
+    #mail{
+        margin-left:9%;
+    }
   }
 
   @media only screen and (max-width: 500px) {
@@ -186,7 +192,26 @@ body{
     }
 
     #action-container{
-        width:39%;
+        width:32%;
+        transition: all 0.5s ease;
+    }
+
+    #extra {
+        display: none;
+    }
+    #mail{
+        margin-left: 13%;
+    }
+
+  }
+
+  @media only screen and (max-width: 350px) {
+    #action-container.hide {
+        width: 13%;
+    }
+
+    #action-container{
+        width:41%;
         transition: all 0.5s ease;
     }
 
@@ -194,5 +219,9 @@ body{
         display: none;
     }
 
-  }
+    #mes{
+        margin-left:23%;
+        margin-right:3%;
+    }
 
+  }
