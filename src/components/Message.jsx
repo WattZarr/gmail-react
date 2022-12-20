@@ -41,7 +41,7 @@ const Message = ({id,data,status}) => {
         {data.isRead == false && (
           <>
           <div className='flex items-center w-[17%]'>
-            <input type="checkbox" className='mr-2 message-check' onClick={makeCheck}/>
+            <div><input type="checkbox" className='mr-2 message-check' onClick={makeCheck}/></div>
             <div><FiStar className='mr-2' id={mid} onClick={handleStar}></FiStar></div>
             <span className=' font-bold'>{data.from}</span>
           </div>
@@ -56,7 +56,7 @@ const Message = ({id,data,status}) => {
       {data.isRead == true && (
       <>
       <div className='flex items-center w-[17%]'>
-        <input type="checkbox" className='mr-2 message-check' onClick={makeCheck} />
+        <div><input type="checkbox" className='mr-2 message-check' onClick={makeCheck} /></div>
         <div><FiStar className='mr-2' id={mid} onClick={handleStar}></FiStar></div>
         <span>{data.from}</span>
       </div>
