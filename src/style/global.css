@@ -131,3 +131,68 @@ body{
 
 
 /* end mail */
+
+/* large device */
+@media only screen and (max-width: 1024px) {
+    #action-container.hide {
+        width: 6%;
+    }
+
+    #action-container{
+        width:19%;
+        transition: all 0.5s ease;
+    }
+
+    #extra {
+        width:10%;
+    }
+
+    #extra.side-panel-hide button{
+        padding-right: 65%;
+    }
+
+    #action-container{
+        width:17%;
+        transition: all 0.5s ease;
+    }
+
+
+  }
+
+/* medium device */
+@media only screen and (max-width: 900px) {
+    #action-container.hide {
+        width: 8%;
+    }
+
+    #action-container{
+        width:19%;
+        transition: all 0.5s ease;
+    }
+
+    #extra {
+        width:10%;
+    }
+
+    #extra.side-panel-hide button{
+        padding-right: 65%;
+    }
+
+  }
+
+  @media only screen and (max-width: 500px) {
+    #action-container.hide {
+        width: 10%;
+    }
+
+    #action-container{
+        width:39%;
+        transition: all 0.5s ease;
+    }
+
+    #extra {
+        display: none;
+    }
+
+  }
+

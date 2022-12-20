@@ -37,15 +37,15 @@ const Message = ({id,data,status}) => {
 
   return (
     <>
-    <div className='flex items-center py-1 px-2 rounded hover:bg-slate-200' id='message'>
+    <div className='text-sm md:text-base flex items-center py-1 px-2 rounded hover:bg-slate-200' id='message'>
         {data.isRead == false && (
           <>
           <div className='flex items-center w-[17%]'>
             <input type="checkbox" className='mr-2 message-check' onClick={makeCheck}/>
-            <FiStar className='mr-2' id={mid} onClick={handleStar}></FiStar>
+            <div><FiStar className='mr-2' id={mid} onClick={handleStar}></FiStar></div>
             <span className=' font-bold'>{data.from}</span>
           </div>
-          <div className='whitespace-pre overflow-hidden mx-4 w-[90%] font-bold'>
+          <div className='whitespace-pre overflow-hidden ml-12 mr-2 md:mx-4 w-[90%] font-bold'>
           <Link to={`detail/${id}`} state={{id:id}}>
             {data.message}
           </Link>
@@ -57,10 +57,10 @@ const Message = ({id,data,status}) => {
       <>
       <div className='flex items-center w-[17%]'>
         <input type="checkbox" className='mr-2 message-check' onClick={makeCheck} />
-        <FiStar className='mr-2' id={mid} onClick={handleStar}></FiStar>
+        <div><FiStar className='mr-2' id={mid} onClick={handleStar}></FiStar></div>
         <span>{data.from}</span>
       </div>
-      <div className='whitespace-nowrap overflow-hidden mx-4 w-[90%]'>
+      <div className='whitespace-nowrap overflow-hidden ml-12 mr-2 md:mx-4 w-[90%]'>
       <Link to={`detail/${id}`} state={{id:id}}>
           {data.message}
       </Link>

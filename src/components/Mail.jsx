@@ -183,7 +183,7 @@ const Mail = () => {
 
   return (
     <div className="h-screen overflow-scroll mt-4 ml-4 relative z-0 pb-32" id="mail">
-        <div className="flex items-center text-xl mb-8">
+        <div className="flex items-center text-sm md:text-xl mb-8">
             <input type="checkbox" className="mr-8" title="select" id="allcheck" name="allcheck"/>
             <VscRefresh className="mx-8" title="refresh" onClick={()=>window.location.reload()}></VscRefresh>
             <HiOutlineDotsVertical className="mx-8 focus:bg-slate-500" title="more" onClick={handleModal}></HiOutlineDotsVertical>
@@ -217,7 +217,7 @@ const Mail = () => {
             </div>
             </form>
         </div>
-            <nav className="flex list-none mb-4 sticky top-0 z-40 bg-white">
+            <nav className="text-sm md:text-base flex list-none mb-4 sticky top-0 z-40 bg-white">
                 <li className="w-1/4 mr-4 bg-white">
                     <NavLink to="/" className="flex pb-2 items-center" style={({ isActive }) => isActive ? {color: '#1d4ed8',background: '#ffffff',borderBottom:'2px solid #1d4ed8',borderRadius:'0'}: { color: 'black', background: 'white' }}><HiOutlineInbox className="mr-4 text-xl"></HiOutlineInbox>Primary</NavLink>
                 </li>
