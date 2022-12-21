@@ -11,6 +11,7 @@ import { useState } from "react"
 import data from "../data"
 import { useRef } from "react"
 import sentData from "../sentData" 
+import Result from "../pages/Result"
 
 const Mail = () => {
 
@@ -217,12 +218,12 @@ const Mail = () => {
             </div>
             </form>
         </div>
-            <nav className="text-sm md:text-base flex list-none mb-4 sticky top-0 z-40 bg-white">
+            <nav className="text-sm md:text-base flex justify-between md:justify-normal list-none mb-4 sticky top-0 z-40 bg-white">
                 <li className="w-1/4 mr-4 bg-white">
                     <NavLink to="/" className="flex pb-2 items-center" style={({ isActive }) => isActive ? {color: '#1d4ed8',background: '#ffffff',borderBottom:'2px solid #1d4ed8',borderRadius:'0'}: { color: 'black', background: 'white' }}><HiOutlineInbox className="mr-4 text-xl"></HiOutlineInbox>Primary</NavLink>
                 </li>
                 <li className="w-1/4 mr-4 bg-white">
-                    <NavLink to="promotion" className="flex pb-2 items-center" style={({ isActive }) => isActive ? {color: '#1d4ed8',background: '#ffffff',borderBottom:'2px solid #1d4ed8',borderRadius:'0'} : { color: 'black', background: 'white' }}><BsTag className="mr-4 text-xl"></BsTag>Promotion</NavLink>
+                    <NavLink to="promotion" className="flex pb-2 items-center" style={({ isActive }) => isActive ? {color: '#1d4ed8',background: '#ffffff',borderBottom:'2px solid #1d4ed8',borderRadius:'0'} : { color: 'black', background: 'white' }}><div><BsTag className="mr-2 md:mr-4 text-xl"></BsTag></div>Promotion</NavLink>
                 </li>
                 <li className="w-1/4 mr-4 bg-white">
                     <NavLink to="social" className="flex pb-2 items-center" style={({ isActive }) => isActive ? {color: '#1d4ed8',background: '#ffffff',borderBottom:'2px solid #1d4ed8',borderRadius:'0'} : { color: 'black', background: 'white' }}><TbUsers className="mr-4 text-xl"></TbUsers>Social</NavLink>
@@ -230,6 +231,7 @@ const Mail = () => {
             </nav>
 
         <Outlet context={[status,addList,removeList,pmail,prmail,smail]}></Outlet>
+        <Result></Result>
     </div>
   )
 }

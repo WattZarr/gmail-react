@@ -6,8 +6,19 @@ import {FiSettings} from 'react-icons/fi'
 import {TbGridDots} from 'react-icons/tb'
 import {BiUser} from 'react-icons/bi'
 import {IoIosMenu} from 'react-icons/io'
+import searchData from '../searchData'
+import data from '../data'
+const Nav = ({change,setChange}) => {
 
-const Nav = () => {
+  const search = () => {
+    document.querySelector('#result').classList.remove('hidden')
+  }
+
+  const handleSearch = (e) => {
+    let query = e.target.value.toLowerCase();
+    searchData.push(data.filter(i => i.message.toLowerCase().indexOf(query) >= 0))
+    setChange(!change)
+  }
 
   const controlAction = () => {
     document.querySelector('#action-container').classList.toggle('hide')
@@ -23,7 +34,7 @@ const Nav = () => {
         <div className="search grow">
             <div className='shadow flex items-center gap-5 bg-gray-200 p-2 drop-shadow-lg rounded-md'>
                 <BsSearch></BsSearch>
-                <input type="text" placeholder='Search Mail' className='border-0 bg-gray-200 w-full'/>
+                <input type="text" placeholder='Search Mail' className='border-0 bg-gray-200 w-full' onFocus={search} onChange={handleSearch}/>
             </div>
         </div>
         <div className="extra">

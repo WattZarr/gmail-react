@@ -12,11 +12,15 @@ body{
     transition: 0.5s;
 }
 
+.result{
+    z-index:20000;
+}
+
 /* side bar */
 
 #action-container{
     position: absolute;
-    z-index: 10000;
+    z-index: 50;
     background-color: white;
     width:15%;
     transition: all 0.5s ease;
@@ -134,6 +138,10 @@ body{
 
 
 /* end mail */
+
+#result{
+    z-index:10000
+}
 
 /* large device */
 @media only screen and (max-width: 1200px) {
