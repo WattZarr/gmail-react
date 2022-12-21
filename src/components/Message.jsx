@@ -40,7 +40,7 @@ const Message = ({id,data,status,isSent}) => {
     <div className='text-sm md:text-base flex items-center py-1 px-2 rounded hover:bg-slate-200' id='message'>
         {data.isRead == false && (
           <>
-          <div className='flex items-center w-[17%]'>
+          <div className='flex items-center w-[21%]'>
             <div><input type="checkbox" className='mr-2 message-check' onClick={makeCheck}/></div>
             <div><FiStar className='mr-2' id={mid} onClick={handleStar}></FiStar></div>
             <span className=' font-bold'>{data.from}</span>
@@ -55,7 +55,7 @@ const Message = ({id,data,status,isSent}) => {
           )}
       {data.isRead == true && (
       <>
-      <div className='flex items-center w-[17%]'>
+      <div className='flex items-center w-[21%]'>
         <div><input type="checkbox" className='mr-2 message-check' onClick={makeCheck} /></div>
         <div><FiStar className='mr-2' id={mid} onClick={handleStar}></FiStar></div>
         <span>{data.from}</span>
